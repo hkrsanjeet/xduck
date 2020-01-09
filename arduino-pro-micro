@@ -4,7 +4,8 @@ Arduino          MicroSD module
  
 VCC       =     VCC
 GND       =     GND
-D15       =     SCK 
-D4        =     CS
+D15       =     SCK
 D14       =     MISO
 D16       =     MOSI
+D4        =     CS
+
