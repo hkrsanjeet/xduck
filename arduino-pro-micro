@@ -1,1 +1,10 @@
+Pin configuration:
 
+Arduino          MicroSD module
+ 
+VCC       =     VCC
+GND       =     GND
+D15       =     SCK 
+D4        =     CS
+D14       =     MISO
+D16       =     MOSI
