@@ -1,0 +1,48 @@
+#include "Keyboard.h"
+
+void typeKey(int key)
+{
+  Keyboard.press(key);
+  delay(50);
+  Keyboard.release(key);
+}
+
+/* Init function */
+void setup()
+{
+  // Begining the Keyboard stream
+  Keyboard.begin();
+
+  // Wait 500ms
+  delay(500);
+
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  Keyboard.releaseAll();
+  // Wait 1000ms
+  delay(1000);
+
+  Keyboard.print("cmd /Q /D /T:7F /F:OFF /V:ON /K");
+  //Keyboard.print("cmd");
+  delay(1000);
+  
+  typeKey(KEY_RETURN);
+  delay(1500);
+  Keyboard.print("for /f %d in ('wmic volume get driveletter^, label ^| find \"DUCKS\"') do set lesion=%d");
+
+  typeKey(KEY_RETURN);
+  delay(3000); 
+  Keyboard.print("START %lesion%\\putty.exe && exit");
+  
+  typeKey(KEY_RETURN);
+  
+  Keyboard.releaseAll();
+
+  typeKey(KEY_RETURN);
+
+  // Ending stream
+  Keyboard.end();
+}
+
+/* Unused endless loop */
+void loop() {}
