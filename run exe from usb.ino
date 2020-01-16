@@ -1,6 +1,6 @@
 //DUCKS = My USB Drive label
 //lesion = variable ,you can choose anything
-//backdoor.exe = file in usb Drive
+//putty.exe = file in usb Drive
 
 #include "Keyboard.h"
 
